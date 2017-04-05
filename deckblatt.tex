@@ -1,0 +1,69 @@
+%Diese Datei kann nicht allein kompiliert werden und dient nur zu Includezwecken.
+
+%Verwendete Variablen 
+% Bitte Folgenden Block kopieren und anpassen!
+%Die Dokumentbasisdaten
+%\newcommand{\fak}{Fakultät für Technik}
+%\newcommand{\studGang}{Studiengang Elektrotechnik/Informationstechnik}
+%\newcommand{\titel}{Der Dokumententitel}
+%\newcommand{\subtitel}{Der Untertitel}
+%\newcommand{\dokArt}{Laborbericht} %Legt die Art des Dokumentes fest (Projektarbeit, Doktorarbeit, Laborbericht, etc)
+%\newcommand{\autor}{Sebastian Strittmatter} %Name des Autors
+%\newcommand{\matnr}{311577} %Matrikelnummer
+%\newcommand{\abgabe}{16.04.2015} %Abgabedatum
+%\newcommand{\Professor}{Prof. Dr. rer. nat. Stefan Bernhard} %Betreuender Professor
+%\newcommand{\Betreuer}{M.Sc. Andrej Sycev und Dipl.-Ing. Dieter Gann} %Weitere Betreuer
+
+%---------------- BEGIN DECKBLATT ---------------------------------
+\ifdefined\NoTitle
+
+\else
+\begin{titlepage}
+\fi
+\vspace*{-3.0cm}
+%\begin{figure}[ht]
+%  \centering
+  
+%  \caption{}
+%\end{figure}
+
+\begin{center}
+\includegraphics[width=1.0\textwidth]{logo-hs.png}
+ \Large \textbf{\fak}\\[1.5cm]
+ 
+ \large \textbf{\studGang} \\[3.5cm]
+ 
+ \LARGE \textbf{\titel} \\[0.5cm]
+ \large \textit{\subtitel} \\[2.5cm]
+ 
+ \textbf{\dokArt} \\[2.5cm]
+ 
+\begin{tabular}{ll}
+  \textbf{Professor} &  \Professor\\
+  \textbf{Betreuer} & \Betreuer\\[1.5cm]
+  \textbf{vorgelegt von} & \autor\\
+ \textbf{Matrikelnummer} & \matnr\\[1cm]
+ \textbf{Abgabetermin} & \abgabe
+\end{tabular} \\[1.5cm]
+
+
+
+                          
+ 
+\end{center}
+
+
+\ifdefined\NoTitle
+
+\else
+\end{titlepage}
+\fi
+%------------------ ENDE DECKBLATT ----------------------------------------------
+\ifdefined\ShowTOC
+
+\else
+\renewcommand{\contentsname}{Inhalt}
+\tableofcontents %Macht das Inhaltsverzeichnis
+\fi
+
+\pagebreak

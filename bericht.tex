@@ -1,0 +1,105 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable} %Für Erstellung von Tabellen aus .csv-Datei
+\usepackage[hidelinks]{hyperref}
+\usepackage{gensymb}
+\usepackage[figure]{hypcap} 
+\usepackage[default,osfigures,scale=0.95]{opensans} %% Alternatively
+%% use the option 'defaultsans' instead of 'default' to replace the
+%% sans serif font only.
+\usepackage[T1]{fontenc}
+\usepackage{pdfpages}
+
+
+
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,includeheadfoot]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+
+%Die Dokumentbasisdaten
+\newcommand{\fak}{Fakultät für Technik}
+\newcommand{\studGang}{Studiengang Technische Informatik}
+\newcommand{\titel}{Endbericht Praxissemester}
+\newcommand{\subtitel}{<Untertitel>}
+\newcommand{\dokArt}{<Mein Abschlussbericht>} %Legt die Art des Dokumentes fest (Projektarbeit, Doktorarbeit, Laborbericht, etc)
+\newcommand{\autor}{<Vorname Nachname>} %Name des Autors
+\newcommand{\matnr}{<Matrikelnummer>} %Matrikelnummer
+\newcommand{\abgabe}{<Abgabedatum>} %Abgabedatum
+\newcommand{\Professor}{<Profesorname>} %Betreuender Professor
+\newcommand{\Betreuer}{} %Weitere Betreuer
+
+
+
+
+%Kopfzeile mittig
+\fancyhead[L]{\leftmark}
+%Linie oben
+\renewcommand{\headrulewidth}{0.5pt}
+
+%Fußzeile links bzw. innen
+\fancyfoot[L]{\autor \  (Matr-Nr.: \matnr)}
+%Fußzeile rechts bzw. außen
+\fancyfoot[R]{\thepage}
+%Linie unten
+\renewcommand{\footrulewidth}{0.5pt}
+
+
+
+
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+
+
+%Deklaration
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=red!10]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!10]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!10]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm,  text centered, draw=black, fill=green!10]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+%opening
+\title{\titel}
+\author{\autor (Matr-Nr.: \matnr)}
+\date{01.09.2016}
+
+
+
+\begin{document}
+
+%\includepdf{img/deckblatt-hs.pdf} %Eventuell PDF vorher einfügen
+
+\input{deckblatt.tex}
+
+\section{Einleitung}
+\label{kap:Einleitung}
+\input{einleitung.tex}
+
+\section {Kapitel 1}
+\label{kap:Kapitel 1}
+\input{kapitel1.tex}
+
+
+%Hier können weitere Kapitel hinzugefüht werden.
+
+
+%% Verzeichnisse 
+\cleardoublepage %Fügt eine leere Seite ein 
+% \phantomsection
+\addcontentsline{toc}{section}{\listfigurename} %Fügt Eintrag Abbildungsverzeichnis in Inhaltsverzeichnis ein
+\listoffigures	%Abbildungsverzeichnis
+
+
+\end{document}
